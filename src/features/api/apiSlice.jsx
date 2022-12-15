@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 export const apiSlice = createApi({
   reducerPath: 'api',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://localhost:9000',
+    baseUrl: 'https://memory-videos-api.onrender.com',
   }),
   tagTypes: ['Videos', 'Video', 'RelatedVideos'],
   endpoints: (builder) => ({
@@ -50,7 +50,7 @@ export const apiSlice = createApi({
         url: `/videos/${id}`,
         method: 'DELETE',
       }),
-      invalidatesTags:["Videos"]
+      invalidatesTags: ['Videos'],
     }),
   }),
 })
