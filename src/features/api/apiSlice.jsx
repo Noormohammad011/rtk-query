@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 export const apiSlice = createApi({
   reducerPath: 'api',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'https://memory-videos-api.onrender.com',
+    baseUrl: `${import.meta.env.VITE_BACKED_URL}`,
   }),
   tagTypes: ['Videos', 'Video', 'RelatedVideos'],
   endpoints: (builder) => ({
